@@ -22,7 +22,7 @@
                      <input type="text" class="form-control" id="username" placeholder="Client ID" />
                   </div>
                   <div class="form-group">
-                     <input type="password" class="form-control" id="password" placeholder="Password"/>
+                     <input type="password" class="form-control" id="password" placeholder="Password" onchange="handlePasswordChange(this)" onkeypress="this.onchange(this);" />
                   </div>
                   <div class="form-group">
                      <div class="checkbox">
@@ -31,12 +31,15 @@
                         </label>
                      </div>
                   </div>
-                  <button type="button" class="btn btn-primary" style="width:100%" onclick="handleLogin()">Sign In</button>
+                  <button type="button"  class="btn btn-primary" id="loginBtn" style="width:100%" disabled onclick="handleLogin()">Sign In</button>
                </form>
                <div style="display:flex;justify-content:space-between">
                   <a href="https://bo.ftconline.in/WebClient/index.cfm" target="_blank">Change Password</a>
                   <a href="https://bo.ftconline.in/WebClient/ChangePassword.cfm" target="_blank">Forgot Password</a>
                </div>
+	       <div class="alert alert-danger" role="alert" id="loginFailure" style="display:none;margin-top:16px;">
+		   Invalid ClientID or password
+		</div>
             </div>
          </div>
       </div>
