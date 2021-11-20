@@ -1,23 +1,36 @@
+const spinner = `<div class="loader">Loading...</div>`
+const loginBtnText = '<text style="margin-left:8px">Sign In</text>'
+const loginBtn = document.querySelector('#loginBtn');
+const login =    document.querySelector('#login')
+const info =    document.querySelector('#info')
+const loginFailure = document.querySelector('#loginFailure');
+
+
 function handleLogin(){
   const username = document.querySelector('#username').value;
   const password = document.querySelector('#password').value;
   if(username === 'jbmu45' && password === 'password'){
-   document.querySelector('#login').style.display = 'none'
-   document.querySelector('#info').style.display = 'block'
-   document.querySelector('#loginFailure').style.display = 'block';
+   loginBtn.innerHTML =  `${spinner}${loginBtnText}`
+   setTimeout(()=>{
+	   login.style.display = 'none'
+	   info.style.display = 'block'
+	   loginFailure.style.display = 'block';
+	      loginBtn.innerHTML =  `${loginBtnText}`
+
+   },3000)
   } else {
-    document.querySelector('#loginFailure').style.display = 'block';
+    loginFailure.style.display = 'block';
   }
 }
 
 function handleLogout(){
-   document.querySelector('#login').style.display = 'block'
-   document.querySelector('#info').style.display = 'none'
-   document.querySelector('#loginFailure').style.display = 'none';
+   login.style.display = 'block'
+   info.style.display = 'none'
+   loginFailure.style.display = 'none';
 }
 
 function handlePasswordChange(ev){
   if(ev.value.length>0){
-    document.querySelector('#loginBtn').disabled = false
+    login.disabled = false
   }
 }
