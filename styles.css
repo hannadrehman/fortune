@@ -1,0 +1,6 @@
+body {
+  background-color: #eee
+}
+.tbl-row {
+display:flex;justify-content:space-between; border-bottom:1px solid gray; padding: 8px
+}

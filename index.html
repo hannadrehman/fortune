@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>HTML 5 Boilerplate</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="./styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   </head>
+   <body>
+      <div class="container">
+         <div id="login" >
+            <div class="container">
+               <img class="img-responsive" src="https://bo.ftconline.in/StaticData/Images/logo.JPG" width="100%" style="margin-top:80px" />
+               <div class="form-group">
+                  <h5>Client Backoffice</h5>
+               </div>
+               <form>
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="username" placeholder="Client ID" />
+                  </div>
+                  <div class="form-group">
+                     <input type="password" class="form-control" id="password" placeholder="Password"/>
+                  </div>
+                  <div class="form-group">
+                     <div class="checkbox">
+                        <label>
+                        <input type="checkbox"> Remember me
+                        </label>
+                     </div>
+                  </div>
+                  <button type="button" class="btn btn-primary" style="width:100%" onclick="handleLogin()">Sign In</button>
+               </form>
+               <div style="display:flex;justify-content:space-between">
+                  <a href="https://bo.ftconline.in/WebClient/index.cfm" target="_blank">Change Password</a>
+                  <a href="https://bo.ftconline.in/WebClient/ChangePassword.cfm" target="_blank">Forgot Password</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="info" style="display:none;background-color:white" >
+         <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" style="float:left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" style="float:right" href="tel:04445609696"> <i class="bi bi-telephone"></i> Call Us </a>
+               </div>
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                  <ul class="nav navbar-nav">
+                     <li class="active"><a href="#">Home</a></li>
+                     <li><a href="#" onclick="handleLogout()">Logout</a></li>
+                  </ul>
+               </div>
+               <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+         </nav>
+         <div class="container" >
+            <h5 style="margin-bottom:24px">Welcome JBMU45-UBAID IMTIYAZ BABA</h5>
+            <div class="container">
+               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-primary">
+                     <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Financial Information (Global)
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body" style="padding:0">
+                           <div class="tbl-row" >
+                              <text></text>
+                              <b>Balance</b>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">NSE_CASH : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class=""></b>
+                              <b>0.0 CR</b>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">MCX : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Ass(JBMU45M) : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Beneficiary : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Net : </b>
+                              <b>0.0 CR</b>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">UnConcile Credit : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Ledger : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Ledger+Mrg-Coll : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Pending Advance Brokrage : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Pending Receipt : </b>
+                              <text>0.0 CR</text>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-primary">
+                     <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                           <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Branch Information
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body" style="padding:0">
+                           <div class="tbl-row" >
+                              <b class="">Branch Code : </b>
+                              <text>ST506</text>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Branch Name :</b>
+                              <b>ABHISHEKH OJHA</b>
+                           </div>
+                           <div class="tbl-row" >
+                              <b class="">Authorize Person :</b>
+                              <text>CHEN</text>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="/scripts.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   </body>
+</html>
+
