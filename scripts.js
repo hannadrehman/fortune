@@ -29,8 +29,3 @@ function handleLogout(){
    loginFailure.style.display = 'none';
 }
 
-function handlePasswordChange(ev){
-  if(ev.value.length>0){
-    login.disabled = false
-  }
-}
